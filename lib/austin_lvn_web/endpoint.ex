@@ -32,7 +32,6 @@ defmodule AustinLvnWeb.Endpoint do
     # This enables LiveReload for LVN clients
     plug LiveViewNative.LiveReloader
     plug Phoenix.CodeReloader
-    plug Phoenix.Ecto.CheckRepoStatus, otp_app: :austin_lvn
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

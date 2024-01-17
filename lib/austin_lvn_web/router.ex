@@ -13,7 +13,10 @@ defmodule AustinLvnWeb.Router do
     # LVN - required, comment out the above line and replace
     # with the line below to instruct the Router where the root
     # layout template is for the swiftui format
-    plug :put_root_layout, html: {AustinLvnWeb.Layouts, :root}, swiftui: {AustinLvnWeb.Layouts.SwiftUI, :root}
+    plug :put_root_layout,
+      html: {AustinLvnWeb.Layouts, :root},
+      swiftui: {AustinLvnWeb.Layouts.SwiftUI, :root}
+
     plug :protect_from_forgery
     plug :put_secure_browser_headers
   end

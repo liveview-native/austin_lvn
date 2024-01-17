@@ -8,7 +8,6 @@
 import Config
 
 config :austin_lvn,
-  ecto_repos: [AustinLvn.Repo],
   generators: [timestamp_type: :utc_datetime]
 
 # Configures the endpoint
