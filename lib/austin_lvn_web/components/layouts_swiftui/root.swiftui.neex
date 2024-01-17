@@ -1,0 +1,3 @@
+<.csrf_token />
+<.embed_stylesheet module={AustinLvnWeb.AppStyles} />
+<%= @inner_content %>
