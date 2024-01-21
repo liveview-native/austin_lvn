@@ -1,15 +1,5 @@
 import Config
 
-# Configure your database
-config :austin_lvn, AustinLvn.Repo,
-  username: "postgres",
-  password: "postgres",
-  hostname: "localhost",
-  database: "austin_lvn_dev",
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true,
-  pool_size: 10
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
@@ -84,4 +74,4 @@ config :swoosh, :api_client, false
 # LVN - Optional to enable annotations and pretty printing in dev mode
 config :live_view_native_stylesheet,
   annotations: true,
-  pretty: true 
+  pretty: true

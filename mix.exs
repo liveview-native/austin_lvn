@@ -33,12 +33,12 @@ defmodule AustinLvn.MixProject do
   defp deps do
     [
       {:phoenix, "~> 1.7.10"},
-      {:phoenix_ecto, "~> 4.4"},
-      {:ecto_sql, "~> 3.10"},
-      {:postgrex, ">= 0.0.0"},
       {:phoenix_html, "~> 3.3"},
       {:phoenix_live_reload, "~> 1.2", only: :dev},
-      {:phoenix_live_view, github: "phoenixframework/phoenix_live_view", ref: "476d1cd288474d7acb33424a74b304b4e9495ff1", override: true},
+      {:phoenix_live_view,
+       github: "phoenixframework/phoenix_live_view",
+       ref: "476d1cd288474d7acb33424a74b304b4e9495ff1",
+       override: true},
       {:floki, ">= 0.30.0", only: :test},
       {:phoenix_live_dashboard, "~> 0.8.2"},
       {:esbuild, "~> 0.8", runtime: Mix.env() == :dev},
@@ -52,7 +52,8 @@ defmodule AustinLvn.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
       {:live_view_native, github: "liveview-native/live_view_native", tag: "0.3.0-alpha.1"},
-      {:live_view_native_swiftui, github: "liveview-native/liveview-client-swiftui", tag: "0.3.0-alpha.2"},
+      {:live_view_native_swiftui,
+       github: "liveview-native/liveview-client-swiftui", tag: "0.3.0-alpha.2"}
     ]
   end
 
@@ -64,10 +65,8 @@ defmodule AustinLvn.MixProject do
   # See the documentation for `Mix` for more info on aliases.
   defp aliases do
     [
-      setup: ["deps.get", "ecto.setup", "assets.setup", "assets.build"],
-      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
-      "ecto.reset": ["ecto.drop", "ecto.setup"],
-      test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
+      setup: ["deps.get", "assets.setup", "assets.build"],
+      test: ["test"],
       "assets.setup": ["tailwind.install --if-missing", "esbuild.install --if-missing"],
       "assets.build": ["tailwind default", "esbuild default"],
       "assets.deploy": ["tailwind default --minify", "esbuild default --minify", "phx.digest"]

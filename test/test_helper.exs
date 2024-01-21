@@ -1,2 +1,1 @@
-ExUnit.start()
-Ecto.Adapters.SQL.Sandbox.mode(AustinLvn.Repo, :manual)
+ExUnit.start(exclude: [:skip])
